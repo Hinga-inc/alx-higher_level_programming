@@ -435,5 +435,5 @@
 
 ### File: 102-python.c
 
-# AUTHOR
-[HINGA PETER](https://twitter.com/HingaPeterK)
+## AUTHOR
+[HINGA PETER]((https://twitter.com/HingaPeterK))
