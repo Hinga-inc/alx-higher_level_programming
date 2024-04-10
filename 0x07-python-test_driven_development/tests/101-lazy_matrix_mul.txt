@@ -1,0 +1,5 @@
+The ``101-lazy_matrix_mul`` module
+==================================
+Thi smodule has a single funtion thar mutiplies 2 matrices and prints out the result:
+	def lazy_matrix_mul(m_a, m_b):
+
