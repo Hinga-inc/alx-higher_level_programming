@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def lookup(obj):
-    return dir(obj)
+    return [i for i in dir(obj)]
