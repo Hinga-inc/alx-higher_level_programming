@@ -1,4 +1,4 @@
-The ``Print Sorted List`` module
+The ``1-my_list`` module
 ================================
 
 Using ``MyList``
