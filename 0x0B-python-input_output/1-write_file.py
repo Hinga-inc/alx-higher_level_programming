@@ -1,19 +1,18 @@
 #!/usr/bin/python3
-"""0x0B. Python - Input/Output, task 1. Number of lines """
+"""0x0B. Python - Input/Output, Write to a file """
 
 
-def number_of_lines(filename=""):
-    """Returns the number of lines in a text file.
+def write_file(filename="", text=""):
+    """Writes a string to a text file (UTF8) and returns the number
+of characters written. Overwrites existing content.
 
     Args:
         filename (str): name of file to be opened
+        text (str): chars to be written
 
     """
-    line_count = 0
-    with open(filename, encoding='utf-8') as file:
-        while True:
-            line = file.readline()
-            if not line:
-                break
-            line_count += 1
-    return line_count
+    # with w flag existing file automatically replaced
+    with open(filename, 'w', encoding='utf-8') as file:
+        chars_written = file.write(text)
+        return chars_written
+
