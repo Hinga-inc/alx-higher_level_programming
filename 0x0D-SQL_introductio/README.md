@@ -353,3 +353,167 @@ Your script should create these records:
 GitHub repository: alx-higher_level_programming<br>
 Directory: 0x0D-SQL_introduction<br>
 File: 9-full_creation.sql<br>
+
+### 10. List by best
+mandatory<br>
+Write a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.<br>
+
+- Results should display both the score and the name (in this order)
+- Records should be ordered by score (top first)
+- The database name will be passed as an argument of the mysql command
+
+```sh
+guillaume@ubuntu:~/$ cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+score   name
+14  Bob
+10  John
+8   George
+3   Alex
+guillaume@ubuntu:~/$ 
+```
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 10-top_score.sql<br>
+
+### 11. Select the best
+mandatory<br>
+Write a script that lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0 in your MySQL server.<br>
+
+- Results should display both the score and the name (in this order)
+- Records should be ordered by score (top first)
+- The database name will be passed as an argument of the mysql command
+
+``` sh
+    guillaume@ubuntu:~/$ cat 11-best_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    score   name
+    14  Bob
+    10  John
+    guillaume@ubuntu:~/$ 
+```
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 11-best_score.sql<br>
+
+### 12. Cheating is bad
+mandatory<br>
+Write a script that updates the score of Bob to 10 in the table second_table.<br>
+
+- You are not allowed to use Bob’s id value, only the name field
+- The database name will be passed as an argument of the mysql command
+
+``` sh
+    guillaume@ubuntu:~/$ cat 12-no_cheating.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    guillaume@ubuntu:~/$ cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    score   name
+    10  John
+    10  Bob
+    8   George
+    3   Alex
+    guillaume@ubuntu:~/$ 
+```
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 12-no_cheating.sql<br>
+
+### 13. Score too low
+mandatory<br>
+Write a script that removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.
+
+- The database name will be passed as an argument of the mysql command
+
+```sh
+    guillaume@ubuntu:~/$ cat 13-change_class.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    guillaume@ubuntu:~/$ cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    score   name
+    10  John
+    10  Bob
+    8   George
+    guillaume@ubuntu:~/$ 
+```
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 13-change_class.sql<br>
+
+### 14. Average
+mandatory<br>
+Write a script that computes the score average of all records in the table second_table of the database hbtn_0c_0 in your MySQL server.<br>
+
+- The result column name should be average
+- The database name will be passed as an argument of the mysql command
+
+``` sh
+    guillaume@ubuntu:~/$ cat 14-average.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    average
+    9.3333
+    guillaume@ubuntu:~/$ 
+```
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 14-average.sql<br>
+
+### 15. Number by score
+mandatory<br>
+Write a script that lists the number of records with the same score in the table second_table of the database hbtn_0c_0 in your MySQL server.<br>
+
+- The result should display:
+    - the score
+    - the number of records for this score with the label number
+- The list should be sorted by the number of records (descending)
+- The database name will be passed as an argument to the mysql command
+``` sh
+    guillaume@ubuntu:~/$ cat 15-groups.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    score   number
+    10  2
+    8   1
+    guillaume@ubuntu:~/$ 
+```
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 15-groups.sql<br>
+
+### 16. Say my name
+mandatory<br>
+Write a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.<br>
+
+- Don’t list rows without a name value
+- Results should display the score and the name (in this order)
+- Records should be listed by descending score
+- The database name will be passed as an argument to the mysql command
+In this example, new data have been added to the table second_table.<br>
+
+```sh
+    guillaume@ubuntu:~/$ cat 16-no_link.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    score   name
+    18  Aria
+    12  Aria
+    10  John
+    10  Bob
+    guillaume@ubuntu:~/$ 
+```
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 16-no_link.sql<br>
+
