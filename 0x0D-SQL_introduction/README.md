@@ -517,3 +517,106 @@ GitHub repository: alx-higher_level_programming<br>
 Directory: 0x0D-SQL_introduction<br>
 File: 16-no_link.sql<br>
 
+### 17. Go to UTF8
+#advanced<br>
+Write a script that converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci) in your MySQL server.
+
+You need to convert all of the following to UTF8:<br>
+
+- Database hbtn_0c_0
+- Table first_table
+- Field name in first_table
+
+``` sh
+    guillaume@ubuntu:~/$ cat 100-move_to_utf8.sql | mysql -hlocalhost -uroot -p 
+    Enter password: 
+    guillaume@ubuntu:~/$ cat 5-full_table.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    Table   Create Table
+    first_table CREATE TABLE `first_table` (\n  `id` int(11) DEFAULT NULL,\n  `name` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+    guillaume@ubuntu:~/$ 
+```
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 100-move_to_utf8.sql<br>
+
+### 18. Temperatures #0
+#advanced<br>
+Import in hbtn_0c_0 database this table dump: download<br>
+
+Write a script that displays the average temperature (Fahrenheit) by city ordered by temperature (descending).<br>
+
+``` sh
+    guillaume@ubuntu:~/$ cat 101-avg_temperatures.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    city    avg_temp
+    Chandler    72.8627
+    Gilbert 71.8088
+    Pismo beach 71.5147
+    San Francisco   71.4804
+    Sedona  70.7696
+    Phoenix 70.5882
+    Oakland 70.5637
+    Sunnyvale   70.5245
+    Chicago 70.4461
+    San Diego   70.1373
+    Glendale    70.1225
+    Sonoma  70.0392
+    Yuma    69.3873
+    San Jose    69.2990
+    Tucson  69.0245
+    Joliet  68.6716
+    Naperville  68.1029
+    Tempe   67.0441
+    Peoria  66.5392
+    guillaume@ubuntu:~/$ 
+```
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 101-avg_temperatures.sql<br>
+
+### 19. Temperatures #1
+#advanced<br>
+Import in hbtn_0c_0 database this table dump: download (same as Temperatures #0)<br>
+
+Write a script that displays the top 3 of cities temperature during July and August ordered by temperature (descending)<br>
+``` sh
+    guillaume@ubuntu:~/$ cat 102-top_city.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    city    avg_temp
+    Naperville  76.9412
+    San Diego   73.7941
+    Sunnyvale   73.2353
+    guillaume@ubuntu:~/$ 
+```
+
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 102-top_city.sql<br>
+   
+### 20. Temperatures #2
+#advanced<br>
+Import in hbtn_0c_0 database this table dump: download (same as Temperatures #0)<br>
+
+Write a script that displays the max temperature of each state (ordered by State name).<br>
+``` sh
+    guillaume@ubuntu:~/$ cat 103-max_state.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+    Enter password: 
+    state   max_temp
+    AZ  110
+    CA  110
+    IL  110
+    guillaume@ubuntu:~/$ 
+```
+###### Repo:
+
+GitHub repository: alx-higher_level_programming<br>
+Directory: 0x0D-SQL_introduction<br>
+File: 103-max_state.sql<br>
+
