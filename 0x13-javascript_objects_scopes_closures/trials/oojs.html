@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    
+    <script>
+        /*
+        // this is an object literal
+        const person = {
+            name: {
+                last: "Hinga",
+                first: "Peter"
+            },
+            age: 20,
+            bio(){
+                console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
+            },
+            introduceself: function (){
+                console.log(`Hi I'm ${this.name.last}.`);
+            },
+        }
+        const myDataName = "height";
+        const myDataValue = "1.77m";
+        person[myDataName] = myDataValue;
+        ;*/
+        /*
+        // this is a constructor function - method 1
+        function newPerson(name) {
+            const obj = {};
+            obj.name = name;
+            obj.introduceSelf = function() {
+                console.log(`Hi son, Surviving is winning ${this.name}`);
+            };
+            return obj;
+        }
+        const Hinga = newPerson("Hinga");
+        */
+
+        // this is a constructor using the new keyword - method 2
+        function newPerson(name){
+            this.name = name;
+            this.introduceSelf = function(){
+                console.log(`Hi son, Surviving is winning ${this.name}`);
+            };
+        }
+    </script>
+  </body>
+
+</html>
